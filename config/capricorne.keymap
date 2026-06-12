@@ -90,39 +90,23 @@
         };
     };
 
-Base_Layer {
-    // -----------------------------------------------------------------------------------------
-    // | TAB | Q | W | E | R | T |     | Y | U | I | O | P | BSPC |
-    // | CTRL| A | S | D | F | G |     | H | J | K | L | ; | '    |
-    // | SHFT| Z | X | C | V | B |     | N | M | , | . | / | ESC  |
-    // | GUI | CLR | BLE | SPC |       | ENT | RSE | ALT          |
-    bindings = <
-        &Hold_Tap_KP TAB     ESC
-        &kp Q       &kp W    &kp E    &kp R      &kp T
-        &kp Y       &kp U    &kp I    &kp O      &kp P
-        &Hold_Tap_KP NB_QUESTION NB_A_RING
+    keymap {
+        compatible = "zmk,keymap";
 
-        &kp LEFT_SHIFT
-        &kp A       &kp S    &kp D    &kp F      &kp G
-        &kp H       &kp J    &kp K    &kp L      &kp NB_O_SLASH
-        &kp NB_AE   &kp LEFT_CONTROL
+        Base_Layer {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
+            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
+            //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
-        &kp Z       &kp X    &kp C    &kp V      &kp B
-        &kp N       &kp M    &kp COMMA &kp DOT   &kp SLASH
-        &Hold_Tap_KP LS(NON_US_HASH) NON_US_HASH
-
-        // Last row (thumbs, left to right)
-        &kp LEFT_ALT
-        &bt BT_CLR_ALL      // clear all BT bonds (temporary)
-        &out OUT_BLE        // force BLE output (temporary)
-        &kp SPACE
-        &Hold_Tap_KP LSHFT  ENTER
-        &Layer_Hold_Tap 2
-        &kp BACKSPACE
-        &mo 3
-        &none
-    >;
-};
+            bindings = <
+&Hold_Tap_KP TAB ESC  &kp Q  &kp W         &kp E     &kp R  &kp T        &kp Y                     &kp U                        &kp I      &kp O    &kp P           &Hold_Tap_KP NB_QUESTION NB_A_RING
+&kp LEFT_SHIFT        &kp A  &kp S         &kp D     &kp F  &kp G        &kp H                     &kp J                        &kp K      &kp L    &kp NB_O_SLASH  &kp NB_AE
+&kp LEFT_CONTROL      &kp Z  &kp X         &kp C     &kp V  &kp B        &kp N                     &kp M                        &kp COMMA  &kp DOT  &kp SLASH       &Hold_Tap_KP LS(NON_US_HASH) NON_US_HASH
+                             &kp LEFT_ALT  &kp LGUI  &mo 1  &kp SPACE    &Hold_Tap_KP LSHFT ENTER  &Layer_Hold_Tap 2 BACKSPACE  &mo 3      &none
+            >;
+        };
 
         Symbols_Numpad {
             // -----------------------------------------------------------------------------------------
