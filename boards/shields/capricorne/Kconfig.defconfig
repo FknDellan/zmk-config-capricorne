@@ -1,26 +1,21 @@
 if SHIELD_CAPRICORNE_LEFT
-
-config ZMK_KEYBOARD_NAME
+  config ZMK_KEYBOARD_NAME
     default "CapriCorne"
 
-config ZMK_SPLIT_ROLE_CENTRAL
+  config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
-config ZMK_USB
+  config ZMK_USB
     default y
 
 endif
 
 if SHIELD_CAPRICORNE_RIGHT
-  # TEMP: give the right side USB so we can test it alone
-  config ZMK_USB
-    default y
-    
+
 endif
 
 if SHIELD_CAPRICORNE_LEFT || SHIELD_CAPRICORNE_RIGHT
-
-config ZMK_SPLIT
+  config ZMK_SPLIT
     default y
-
+    
 endif
