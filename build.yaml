@@ -2,6 +2,6 @@ include:
   - board: nice_nano@2.0.0
     shield: capricorne_left
     snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_USB_LOGGING=y
   - board: nice_nano@2.0.0
     shield: capricorne_right
