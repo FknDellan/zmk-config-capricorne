@@ -11,6 +11,13 @@ config ZMK_USB
 
 endif
 
+if SHIELD_CAPRICORNE_RIGHT
+  # TEMP: give the right side USB so we can test it alone
+  config ZMK_USB
+    default y
+    
+endif
+
 if SHIELD_CAPRICORNE_LEFT || SHIELD_CAPRICORNE_RIGHT
 
 config ZMK_SPLIT
