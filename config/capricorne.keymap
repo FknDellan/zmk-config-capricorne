@@ -8,7 +8,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/outputs.h>  // keep this if you’ll want OUT_BLE later
+#include <dt-bindings/zmk/outputs.h>
 
 / {
     behaviors {
@@ -117,9 +117,9 @@ Base_Layer {
 
         // Last row (thumbs, left to right)
         &kp LEFT_ALT
-        &bt BT_CLR_ALL          // still clears all BT bonds
-        &studio_unlock          // TEMP: unlock ZMK Studio
-        &kp SPACE
+        &out OUT_TOG       // toggle USB / BLE output
+        &bt BT_CLR_ALL     // clear all Bluetooth bonds
+        &bt BT_SEL 0       // select profile 0 (triggers advertising)
         &Hold_Tap_KP LSHFT ENTER
         &Layer_Hold_Tap 2 BACKSPACE
         &mo 3
