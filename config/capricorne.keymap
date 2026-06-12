@@ -117,8 +117,8 @@ Base_Layer {
 
         // Last row (thumbs, left to right)
         &kp LEFT_ALT
-        &bt BT_CLR_ALL   // clear all BT bonds
-        &bt BT_SEL 0     // select profile 0 (forces pairing)
+        &bt BT_CLR_ALL          // still clears all BT bonds
+        &studio_unlock          // TEMP: unlock ZMK Studio
         &kp SPACE
         &Hold_Tap_KP LSHFT ENTER
         &Layer_Hold_Tap 2 BACKSPACE
