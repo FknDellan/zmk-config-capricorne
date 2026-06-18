@@ -304,6 +304,12 @@
             // | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  | ESC  |
             //                    | GUI | EN  | SV  |   | ENT | RSE | ALT | PHR  |
             //
+            // Left — phrases, same finger EN (top) / SV (home):
+            // Q/A = looking into this   W/S = need more details   E/D = issue resolved
+            //
+            // Right — Windows shortcuts:
+            // Y=Clipboard  U=Emoji  I=Snip  O=Explorer  P=Lock
+            // H=Run        J=CMD    K=PS    L=TaskMgr   Ö=Settings
 
             bindings = <
 &trans  &ph_look_en  &ph_det_en  &ph_res_en  &phEN   &phSV     &kp LG(V)  &kp LG(DOT)      &kp LS(LG(S))  &kp LG(E)        &kp LG(L)   &trans
